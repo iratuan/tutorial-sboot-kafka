@@ -9,7 +9,7 @@
 - [Respositorio no github](https://github.com/iratuan/tutorial-sboot-kafka)
 
 ## Sobre o tutorial
-Neste tutorial, exploraremos a construção de uma API em Spring Boot que simula uma transação em um e-commerce, com um fluxo completo de processamento de pedidos e envio de notificações por e-mail. Nossa API será capaz de receber um pedido, persistir suas informações em um banco de dados PostgreSQL, e enviar o pedido para uma fila Kafka, representando o fluxo do status de cada pedido.
+Neste tutorial, exploraremos a construção de uma API em Spring Boot que simula uma transação em um e-commerce, com um fluxo simples de processamento de pedidos e envio de notificações por e-mail (mockado). Nossa API será capaz de receber um pedido, persistir suas informações em um banco de dados PostgreSQL, e enviar o pedido para uma fila Kafka, representando o fluxo do status de cada pedido.
 
 Ao ouvir essa fila, um consumidor Kafka atualizará o status do pedido e enviará as informações detalhadas do pedido e do cliente para outra fila, dedicada ao envio de e-mails. Em seguida, um segundo consumidor Kafka escutará essa fila de envio de e-mails e simulará o envio da notificação para o cliente, armazenando a data e hora exatas em que o e-mail foi enviado.
 
